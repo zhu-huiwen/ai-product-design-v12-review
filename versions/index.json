@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026/10/28 09:09:02",
+  "versions": [
+    {
+      "id": "v1.0.0",
+      "releaseId": "release-mvrf24h5-b747b1ef",
+      "name": "1.0.0",
+      "label": "1.0.0",
+      "status": "final",
+      "createdAt": "2026/10/28 09:09:02",
+      "snapshotSummary": "页面定版 1.0.0",
+      "source": "workspace",
+      "deletable": true,
+      "directory": "versions/v1.0.0",
+      "reviewDataPath": "versions/v1.0.0/review-data.json",
+      "renameHistory": []
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-28T01:09:02.881Z",
+  "packageType": "prd-review",
+  "entryFile": "index.html",
+  "runtime": "hosted",
+  "defaultCapabilities": {
+    "runtime": "hosted",
+    "hasDraft": false,
+    "canManageVersions": false,
+    "canManageAnnotations": false,
+    "canAddComments": false,
+    "canManageDraftComments": false,
+    "canPackage": false,
+    "canOpenFolder": false
+  },
+  "deploymentRequirements": {
+    "staticFiles": "将压缩包内容作为站点根目录发布，不要只上传 zip 文件。",
+    "history": "保留 versions/ 下全部定版历史和相对资源路径。",
+    "comments": {
+      "optional": true,
+      "stateEndpoint": "GET /__prd_file_store/state",
+      "createEndpoint": "POST /__prd_file_store/comments",
+      "createBody": {
+        "versionId": "定版版本 ID",
+        "annotationId": "标注 ID",
+        "text": "匿名评论内容"
+      },
+      "rules": [
+        "不建立用户体系，不记录评论人。",
+        "评论必须包含 ISO 8601 createdAt。",
+        "线上评论只允许新增，不提供编辑和删除。",
+        "state 接口返回 capabilities.canAddComments=true 后页面才展示评论入口。"
+      ]
+    }
+  }
+}
